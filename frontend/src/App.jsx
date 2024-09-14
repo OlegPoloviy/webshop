@@ -1,4 +1,4 @@
-import {Products} from "./components/Products.jsx";
+import {Products} from "./pages/Products.jsx";
 import './App.css'
 
 function App() {

@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  width: 100%;
+
+  .menu {
+    position: relative;
+    top: 20vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .phones {
+      background-image: url("./src/media/smartphone.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .laptop{
+      background-image: url("./src/media/laptop.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .electronics{
+      background-image: url("./src/media/fridge.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .menu div {
+    width: 30%;
+    height: 60vh;
+    border: 1px solid black;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: aqua;
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: blue;
+      }
+
+      &.active {
+        font-weight: bold;
+        color: green;
+      }
+    }
+  }
+
+  .menu div:hover{
+    box-shadow: 10px 10px 10px black;
+  }
+}
