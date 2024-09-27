@@ -1,6 +1,8 @@
 import {useEffect} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {getPlaceholderProducts} from "../store/slices/productsSlice.jsx";
+import {useNavigate} from "react-router-dom";
+
 
 export function Products(){
     const dispatch = useDispatch();
@@ -9,6 +11,11 @@ export function Products(){
     useEffect(() => {
         dispatch(getPlaceholderProducts())
     }, [dispatch]);
+
+    const navigation = useNavigate();
+    function navigateProduct(product){
+        navigation('/products/' + product.id);
+    }
 
     return(
         <>
@@ -20,7 +27,7 @@ export function Products(){
                             <br/>
                             {el.price}
                             <br/>
-                            <button>See more about {el.title}</button>
+                            <button onClick={() => navigateProduct(el)}>See more about {el.title}</button>
                         </div>
                     ))
                 }
