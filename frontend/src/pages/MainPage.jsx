@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "../styles/mainPage.scss";
-import MyNavbar from "../components/Navbar.jsx";
 
 export function MainPage() {
     return (
         <>
-            <MyNavbar/>
             <div className="container">
                 <div className="menu">
                     <div className="phones">

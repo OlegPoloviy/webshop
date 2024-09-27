@@ -19,6 +19,8 @@ export function Products(){
                             <b>{el.id}</b> - {el.title},{el.type}
                             <br/>
                             {el.price}
+                            <br/>
+                            <button>See more about {el.title}</button>
                         </div>
                     ))
                 }
