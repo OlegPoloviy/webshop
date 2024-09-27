@@ -31,4 +31,6 @@ Welcome to the Online Shop project! This is a full-stack e-commerce application 
 
    ```bash
    git clone https://github.com/OlegPoloviy/webshop.git
-   cd online-shop
+   cd backend
+   npm run dev
+   
