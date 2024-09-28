@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 
 export function Products(){
     const dispatch = useDispatch();
-    const products = useSelector(store => store);
+    const products = useSelector(store => store.productsReducer);
 
     useEffect(() => {
         dispatch(getPlaceholderProducts())

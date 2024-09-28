@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router-dom";
-import {MainPage,Products,ErrorPage,Product} from "../pages";
+import {MainPage,Products,ErrorPage,Product,LaptopsPage} from "../pages";
 import App from '../App.jsx'
 
 export const routes = createBrowserRouter([
@@ -18,6 +18,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/products/:id',
                 Component: Product
+            },
+            {
+                path: '/laptops',
+                Component: LaptopsPage
             }
         ]
     },
