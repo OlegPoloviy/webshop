@@ -10,8 +10,11 @@ export function Navbar(){
         <>
             <div className="nav-container">
                 <div className={"nav-container-logo"}>
-                    <img src={Logo} alt=""/>
-                    <p>Tech 4 you</p>
+                    <NavLink to={"/"} style={{textDecoration: "none",margin: "0", display:"flex"}}>
+                        <img src={Logo} alt=""/>
+                        <p>Tech 4 you</p>
+                    </NavLink>
+
                 </div>
                 <ul className={"nav-container-list"}>
                     <li>
