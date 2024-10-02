@@ -1,6 +1,8 @@
 import {Form, Field, Formik,ErrorMessage} from "formik"
 import {initialVal,ENUM_FORM} from "../constants/formContsants.jsx";
 import * as yup from "yup";
+import Google from "../media/Vector.png"
+import "../styles/form.scss";
 
 const validationSchema = yup.object({
     [ENUM_FORM.NAME]: yup.string().required("Enter your name please").min(1,"Too short").max(255,"Who are you?!"),
@@ -18,37 +20,42 @@ export function RegisterPage(){
 
     return(
         <>
-            <h2>Register</h2>
-            <Formik initialValues={initialVal} onSubmit={sendData} validationSchema={validationSchema}>
-                <Form>
-                    <div>
-                        <label htmlFor={ENUM_FORM.NAME}>Your name</label>
-                        <Field type={'text'} name={ENUM_FORM.NAME} placeholder={'Petro etc.'}/>
-                        <ErrorMessage name={ENUM_FORM.NAME}/>
-                    </div>
-                    <div>
-                        <label htmlFor={ENUM_FORM.SURNAME}>Your surname</label>
-                        <Field type={'text'} name={ENUM_FORM.SURNAME} placeholder={'Ivanenko etc.'}/>
-                        <ErrorMessage name={ENUM_FORM.SURNAME}/>
-                    </div>
-                    <div>
-                        <label htmlFor={ENUM_FORM.EMAIL}>Enter email</label>
-                        <Field type={'email'} name={ENUM_FORM.EMAIL} placeholder={'example@gmail'}/>
-                        <ErrorMessage name={ENUM_FORM.EMAIL}/>
-                    </div>
-                    <div>
-                        <label htmlFor={ENUM_FORM.PASSWORD}>Enter your password</label>
-                        <Field type={ENUM_FORM.PASSWORD} name={"password"}/>
-                        <ErrorMessage name={ENUM_FORM.PASSWORD}/>
-                    </div>
-                    <div>
-                        <label htmlFor="repass">Repeat your password</label>
-                        <Field type={'password'} name={'repass'}/>
-                        <ErrorMessage name={ENUM_FORM.REPASS}/>
-                    </div>
-                    <button type={'submit'}>Register</button>
-                </Form>
-            </Formik>
+            <div className={"container"}>
+                <div className={'image-container'}>
+                </div>
+                <Formik initialValues={initialVal} onSubmit={sendData} validationSchema={validationSchema}>
+                    <Form className={"form-register"}>
+                        <h2>Create an account</h2>
+                        <div>
+                            <label htmlFor={ENUM_FORM.NAME}>Your name</label>
+                            <Field type={'text'} name={ENUM_FORM.NAME} placeholder={'Petro etc.'} className={"input-field"}/>
+                            <ErrorMessage name={ENUM_FORM.NAME} component={"div"} className={"error"}/>
+                        </div>
+                        <div>
+                            <label htmlFor={ENUM_FORM.SURNAME}>Your surname</label>
+                            <Field type={'text'} name={ENUM_FORM.SURNAME} placeholder={'Ivanenko etc.'}  className={"input-field"}/>
+                            <ErrorMessage name={ENUM_FORM.SURNAME} component={"div"} className={"error"}/>
+                        </div>
+                        <div>
+                            <label htmlFor={ENUM_FORM.EMAIL}>Enter email</label>
+                            <Field type={'email'} name={ENUM_FORM.EMAIL} placeholder={'example@gmail'}  className={"input-field"}/>
+                            <ErrorMessage name={ENUM_FORM.EMAIL} component={"div"} className={"error"}/>
+                        </div>
+                        <div>
+                            <label htmlFor={ENUM_FORM.PASSWORD}>Enter your password</label>
+                            <Field type={ENUM_FORM.PASSWORD} name={"password"}  className={"input-field"}/>
+                            <ErrorMessage name={ENUM_FORM.PASSWORD} component={'div'} className={"error"}/>
+                        </div>
+                        <div>
+                            <label htmlFor="repass">Repeat your password</label>
+                            <Field type={'password'} name={'repass'}  className={"input-field"}/>
+                            <ErrorMessage name={ENUM_FORM.REPASS } component={"div"} className={"error"}/>
+                        </div>
+                        <button type={'submit'} className={"submit-button"}>Register</button>
+                        <button className={'google-button'}><img src={Google} alt=""/> Sign up with Google</button>
+                    </Form>
+                </Formik>
+            </div>
         </>
     )
 }
