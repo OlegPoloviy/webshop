@@ -7,7 +7,7 @@
 .container{
   display: flex;
   justify-content: space-between;
-}
+
 
 .image-container {
   background-image: url("../media/img.png");
@@ -55,10 +55,6 @@
     width: 70%;
   }
 
-  .error{
-    color: $error-color;
-  }
-
   .google-button{
     position: relative;
     top: 5vh;
@@ -66,6 +62,12 @@
     left: 5vw;
     background-color: #FFFFFF;
     border-radius: 5%;
+  }
+
+
+  .error{
+    color: $error-color;
+  }
 
     img{
       height: 60%;
