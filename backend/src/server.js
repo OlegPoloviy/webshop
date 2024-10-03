@@ -3,6 +3,7 @@ import { router } from "./routes/appRouter.js";
 import "dotenv/config";
 import { shopRouter } from "./routes/shopRouter.js";
 import { laptopRouter } from "./routes/laptopsRouetr.js";
+import { userRouter } from "./routes/userRoter.js";
 import cors from "cors";
 import bodyParser from "body-parser";
 
@@ -14,6 +15,7 @@ app.use(cors())
 app.use(router);
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.json());
+app.use("/user",userRouter);
 app.use("/laptops",laptopRouter);
 app.use("/shop",shopRouter);
 

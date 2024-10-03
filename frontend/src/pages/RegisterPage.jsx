@@ -15,7 +15,27 @@ const validationSchema = yup.object({
 export function RegisterPage(){
 
     function sendData(data){
-        console.log(data)
+        fetch("http://localhost:3020/user/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"  // Вказуємо, що відправляємо JSON
+            },
+            body: JSON.stringify({
+                data: data  // Перетворюємо об'єкт `data` в JSON-рядок
+            })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();  // Перетворюємо відповідь з JSON-формату
+            })
+            .then(data => {
+                console.log("Success:", data);  // Обробка успішної відповіді
+            })
+            .catch(error => {
+                console.error("Error:", error);  // Обробка помилки
+            });
     }
 
     return(
