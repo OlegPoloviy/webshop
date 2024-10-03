@@ -13,7 +13,6 @@ const validationSchema = yup.object({
 })
 
 export function RegisterPage(){
-
     function sendData(data){
         fetch("http://localhost:3020/user/register", {
             method: "POST",
@@ -25,13 +24,14 @@ export function RegisterPage(){
             })
         })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                if(!response.ok){
+                    alert(`error adding user: ${response}`)
                 }
-                return response.json();  // Перетворюємо відповідь з JSON-формату
+                return response.json();
             })
             .then(data => {
-                console.log("Success:", data);  // Обробка успішної відповіді
+                console.log(data);
+                alert(`User ${data.data.name} registered!`);
             })
             .catch(error => {
                 console.error("Error:", error);  // Обробка помилки
