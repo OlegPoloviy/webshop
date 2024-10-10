@@ -13,7 +13,7 @@
                 surname: surname,
                 email: email,
                 password: hashed
-            },
+            },  
             {
                 fields:["name","surname","email","password"]
             }

@@ -18,5 +18,9 @@ export const shopDTO = sequelize.define("products",{
     price: {
         type : DataTypes.DECIMAL,
         allowNull:false
-    }
+    },
+   path_to_img: {
+      type: DataTypes.STRING,
+      allowNull: false,
+   }
 },{timestamps:false});
