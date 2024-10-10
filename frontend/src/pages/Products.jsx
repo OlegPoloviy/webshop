@@ -17,12 +17,16 @@ export function Products(){
         navigation('/products/' + product.id);
     }
 
+    console.log(products);
+
     return(
         <>
             <div>
                 {
                     products && products.map((el,id) => (
-                        <div key={id}>
+                        <div key={id} style={{border:" 1px solid red"}}>
+                            <img src={el.path_to_img} alt="" width={'250'}/>
+                            <br/>
                             <b>{el.id}</b> - {el.title},{el.type}
                             <br/>
                             {el.price}

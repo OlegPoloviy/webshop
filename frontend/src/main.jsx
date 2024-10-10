@@ -14,11 +14,10 @@ createRoot(document.getElementById('root')).render(
                 <RouterProvider router={routes}>
                     <div>
                         <App/>
-                    </div>
+                    </div>      
                 </RouterProvider>
 
             </Provider>
         </GoogleOAuthProvider>
     </>
-    ,
 )
