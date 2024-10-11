@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.products_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px; /* Додано обмеження на ширину контейнера */
+  margin: 0 auto; /* Центрування сітки */
+  padding: 20px;
+  overflow-x: hidden; /* Запобігання горизонтальній прокрутці */
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.product_card:hover {
+  transform: scale(1.05);
+}
+.product_card .product_image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.product_card .product_title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+.product_card .product_price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: green;
+}
+
+/*# sourceMappingURL=products.css.map */

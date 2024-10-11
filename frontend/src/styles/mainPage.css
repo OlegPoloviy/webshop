@@ -1,5 +1,16 @@
 .header {
   background-image: url("../media/background_main.jpeg");
+  width: 100%;
+}
+
+.list_prod {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 10vh;
+}
+.list_prod p {
+  color: grey;
 }
 
 /*# sourceMappingURL=mainPage.css.map */
