@@ -1,0 +1,80 @@
+@import "var";
+
+*{
+  font-family: $font;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+
+
+.image-container {
+  background-image: url("../media/img.png");
+  width: 90vw;
+  height: 92vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  right: 20vw;
+}
+
+.form-register{
+  width: 40vw;
+  border-radius: 3%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: 5vh;
+  right: 5vw;
+
+  h2{
+    font-size: 32px;
+  }
+
+  div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-field{
+    border: none;
+    border-bottom: 1px solid black;
+  }
+
+  .submit-button{
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5%;
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+    width: 70%;
+  }
+
+  .google-button{
+    position: relative;
+    top: 5vh;
+    width: 70%;
+    left: 5vw;
+    background-color: #FFFFFF;
+    border-radius: 5%;
+  }
+
+
+  .error{
+    color: $error-color;
+  }
+
+    img{
+      height: 60%;
+      position: relative;
+      right: 0.5vw;
+      bottom: 0.2vh;
+    }
+  }
+
+}
